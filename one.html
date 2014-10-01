@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+        <html>
+<head>
+    <title>Layout Demo</title>
+    <style>
+
+
+       body{
+           background-color:lightblue;
+           padding:0;
+           margin:0;
+       }
+.clearfix{
+    clear:both;
+
+}
+
+#wrapper{
+    background-color:lightblue;
+    z-index:1;
+}
+
+#header{
+    opacity:1;
+    position:relative;
+    height:30px;
+    background-color:powderblue;
+    margin:0;
+    padding:0;
+    text-align:center;
+
+}
+
+       #header:hover {
+           opacity:.3;
+
+           -webkit-transition: all .75s ease-in-out;
+           -moz-transition: all .75s ease-in-out;
+           -o-transition: all .75s ease-in-out;
+           transition: all .75s ease-in-out;
+       }
+
+
+        #footer{
+            position:absolute;
+
+            background-color:powderblue;
+            bottom:0;
+            margin:0;
+            padding:0;
+            text-align:center;
+            width:100%;
+            height:20px;
+
+        }
+
+        #nav{
+            background-color: #e0e6db;
+            float:left;
+            width:100px;
+
+
+
+        }
+
+
+        #content{
+
+            background-color:whitesmoke;
+            color:#333;
+            margin-left:100px;
+            padding:.5% 0 0 .5%;
+            border:3px solid;
+          overflow:auto;
+            border-radius:20px;
+
+            -moz-box-shadow: 5px 5px 5px 5px #9EB8E6;
+            -webkit-box-shadow: 5px 5px 5px #9EB8E6;
+            box-shadow: 5px 5px 5px #9EB8E6;
+
+        }
+
+       a{
+       text-decoration:none;
+       }
+
+       a:hover{
+           color:#666;
+       }
+
+       a:visited{
+        text-decoration:none;
+
+       }
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+    <div id="header"> HEADER
+    </div>
+<div id="wrapper">
+    <div id="nav">
+        <ul>
+            <li> <a href="">item1</a></li>
+            <li> <a href="">item2</a></li>
+            <li> <a href="">item3</a></li>
+            <li> <a href="">item4</a></li>
+            <li> <a href="">item5</a></li>
+            <li> <a href="">item6</a></li>
+
+
+        </ul>
+    </div>
+
+    <div id="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur consequuntur, corporis earum error
+            fugiat illum ipsum, laboriosam maxime molestias nam, nisi nulla omnis saepe sed soluta suscipit unde
+            velit.</p>
+
+        <p>Architecto distinctio eaque, eligendi explicabo impedit iusto minima modi nihil nisi perspiciatis quidem
+            sapiente tempora tempore vel veniam vitae voluptate. Accusamus adipisci aliquam assumenda fuga laborum
+            maxime nisi tempore voluptatum!</p>
+
+        <p>Ab accusamus alias cumque distinctio dolores eaque est fuga impedit inventore ipsam maiores neque pariatur
+            quibusdam repellat, ullam! Ad delectus illum incidunt iste non praesentium, quo voluptas! Aliquam,
+            molestias, quod.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi, asperiores debitis deleniti distinctio
+            expedita explicabo fugit nam nulla, perferendis praesentium provident quaerat sed ullam voluptatum? Aliquid
+            fugit quasi tenetur.</p>
+
+        <p>Dolorum non, perspiciatis. Architecto dignissimos dolor ea fugit itaque iusto obcaecati, odit perferendis,
+            provident quam qui rem totam vitae. Aspernatur dolorem, doloremque incidunt minima mollitia vero voluptate.
+            Assumenda, consectetur, eligendi.</p>
+
+        <p>Autem blanditiis est exercitationem harum minima numquam. Aliquam consequatur dolores dolorum et fuga magnam
+            maxime nisi non perspiciatis porro quo reiciendis repellendus reprehenderit sint, tempore unde vero.
+            Architecto possimus, sed!</p>
+
+
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
+    <div id="footer">
+        FOOTER
+    </div>
+</body>
+
+
+
+
+
+</html>
+
+
+
+

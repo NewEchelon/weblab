@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+
+        var star= $('li');
+        (star).mouseenter(function () {
+            $(this).addClass('starred');
+            $(this).prevAll(".star").addClass("starred");
+            console.log($(this));
+        });
+
+        (star).mouseleave(function () {
+            $('li.starred').each(function () {
+                $(this).removeClass("starred");
+            });
+        });
+
+        (star).click(function () {
+            (star).removeClass("current");
+            $(this).addClass("current");
+            $(this).prevAll(".star").addClass("current");
+        });
+    });
+</script>
+    <style>
+
+        ul { float:left;
+            list-style:none;
+            background-color:black;
+            padding:10px;
+        }
+        ul li {
+            align-content:center;
+            float:left;
+            background-color:lightblue;
+        height:10px;
+        width:20px;
+            margin:0 10px;
+            display:inline-block;
+        border-radius:5px;
+           }
+        .star:hover, .starred, .current {
+            background-color:red;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body><ul>
+<li id="star1" class="star"></li>
+<li id="star2" class="star"></li>
+<li id="star3" class="star"></li>
+<li id="star4" class="star"></li>
+<li id="star5" class="star"></li>
+</ul>
+</body>
+</html>

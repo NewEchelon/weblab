@@ -1,0 +1,68 @@
+
+
+body{font-family:sans-serif;
+background-color:#fff;
+color:forestgreen;
+}
+
+
+.spicy {color:red;
+
+}
+
+
+.columns h1{color:red;}
+.columns h2{color:red;}
+
+
+.specialDishes thead td{
+    font-size:10px;
+    color:red;
+text-align:left;
+    padding:0 10px 0 9px;
+}
+
+.specialDishes thead td:nth-child(3){font-size:22px;
+font-weight:bold;
+text-align:right;}
+
+.specialDishes tbody td{border-bottom: 2px dotted forestgreen;
+    text-align:right;
+}
+.specialDishes tbody td:nth-child(3){
+    width:285px;
+    text-align:left;
+
+
+}
+#specials {
+    width: 800px;
+    margin:0 auto;
+    border: 3px solid red;
+    border-radius:25px;
+    padding:20px;
+
+}
+.lunchSpecials{
+    border-bottom: 7px solid red;
+padding-bottom:8px;
+
+}
+.itemPrice{ float:right;
+}
+#specials td{line-height:.85;}
+
+.columns{border:0;
+    margin:0 auto;
+    font-size:12px;
+padding:0;
+}
+
+.col{ float:left;
+width:50%;}
+
+.labels span:first-child{ width:330px;
+display:inline-block;
+text-align:center;
+color: red;
+font-size:12px;}

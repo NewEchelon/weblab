@@ -1,0 +1,60 @@
+
+
+.tab-wrapper{
+    background-color: #fff;
+    width:80%;
+    margin:auto
+    margin: 0 auto;
+
+
+}
+
+ul.tabs{
+    margin: auto;
+
+
+
+}
+
+
+li{
+    font-family:san-serif, 'BanglaMN';
+    color:#fff;
+    display:inline;
+    padding: 10px 40px;
+ background-color:#aed9ec;
+
+
+}
+li a {
+    text-decoration:none;
+}
+li a:visited{
+    text-decoration:none;
+color:#fff;
+
+}
+
+li.active{
+
+   color:#fff;
+    background-color:#000;
+    border-bottom:none;
+
+}
+
+.panels{
+
+}
+
+.panel{
+
+    color:black;
+height:200px;
+    width:600px;
+    background-color:#aed9ec;
+}
+
+.panel.active{
+    display:block;
+}

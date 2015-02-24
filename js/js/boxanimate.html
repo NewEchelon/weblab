@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(function () {
+                var box = $('#box');
+
+                box.on('mouseenter', function () {
+                    box.stop(true).animate({
+                        backgroundColor: 'green',
+                        width: 500,
+                        height: 500,
+                    }, 1500);
+                })
+
+            })
+        });
+    </script>
+    <style>
+
+        #box{
+
+            height:100px;
+            width:100px;
+            background-color:#132312;}
+
+        .larger {
+
+            height: 500px;
+            width: 300px;
+            background-color: aliceblue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+
+<div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+$(function(){
+
+var table = $('#users');
+var tbody = table.find('tbody');
+
+var nameField = $('#name');
+var emailField = $('#email');
+var addButton = $('#add');
+var clearAll = $('#clearAll');
+
+// Check to see if we have existing records
+var userTableData = localStorage.getItem('userTable');
+userTableData = JSON.parse(userTableData);
+
+if(!userTableData){
+userTableData = [];
+} else {
+userTableData.forEach(function(record){
+tbody.append( makeRow(record) );
+});
+}
+
+
+addButton.on('click', function(){
+
+var name = nameField.val();
+var email = emailField.val();
+
+if(email.match(/^.+?\@.+\..+?$/)){ // is valid email ?
+
+var record = {
+name: name,
+email: email,
+ts: Date.now()
+};
+
+userTableData.push(record);
+
+save();
+
+tbody.append( makeRow(record) );
+
+nameField.val("");
+emailField.val("").css({borderColor: ''});
+} else {
+emailField.css({
+borderColor: 'red'
+});
+}
+
+});
+
+tbody.on('click', 'button.remove', function(event){
+var row = $(this).parents('tr');
+var id = row.data('id');
+
+userTableData = userTableData.filter(function(record){
+return (record.ts !== id);
+});
+
+save();
+
+row.remove();
+});
+
+clearAll.on('click', function(){
+tbody.empty();
+userTableData = [];
+save();
+});
+
+function save(){
+localStorage.setItem('userTable', JSON.stringify(userTableData));
+}
+
+function makeRow(record){
+return "<tr data-id='"+ record.ts +"'>" +
+    "<td>" + record.name + "</td>" +
+    "<td>" + record.email + "</td>" +
+    "<td><button class='remove btn btn-primary btn-xs'>remove</button></td>" +
+    "</tr>";
+}
+
+});
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/united/bootstrap.min.css">
+    <style>
+        h3 {
+            margin: 40px 0px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h3>Add Users</h1>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <table id="users" class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>&nbsp;</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td><input type="text" id="name" /></td>
+                    <td><input type="text" id="email" /></td>
+                    <td><button type="button" class="btn btn-info btn-sm" id="add">Add</button></td>
+                </tr>
+                </tfoot>
+            </table>
+            <button class="btn btn-sm" id="clearAll">clear all</button>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="userTable.js"></script>
+</body>
+</html>

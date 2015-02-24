@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+
+    $(document).ready(function() {
+
+
+        var maxChars = 140;
+        var inputBox = $('.input1');
+        var count = $('.input2');
+
+
+        inputBox.on('keyup', checkAndUpdateCount);
+
+        function checkAndUpdateCount(event) {
+        var currentText= inputBox.val();
+            var remaining= maxChars - currentText.length;
+            if(remaining >= 0) {
+                count.text(remaining);
+            } else {count = text(0);{
+            var truncate= currentText.substring(0, maxChars-1);
+            inputBox.val(truncate);}
+            }
+            }
+console.log(maxChars- currentText.length);
+
+
+        });
+
+
+
+</script>
+    <style>
+
+        .input1{height:100px;
+        width:300px;
+        float:left;
+        text-align:left;
+        border-radius:10px;
+        font:14px;}
+
+        .input2{}
+        .clearfix{
+            clear:both;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+<textarea class="input1"> </textarea>
+<div class="clearfix">
+<p ><span class="input2">140</span> characters remaining    <input  type="button" name="reset" value="reset"></p>
+
+</div>
+</body>
+</html>

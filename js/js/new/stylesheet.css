@@ -1,0 +1,61 @@
+body {
+    background: #ccc;
+}
+
+.tab-wrapper {
+
+    width: 80%;
+    margin: auto;
+}
+
+ul.tabs {
+    list-style:none;
+    display: block;
+    height: 40px;
+}
+
+ul.tabs li {
+    font-family:san-serif, 'BanglaMN';
+
+
+    float: left;
+    margin-right: 12px;
+    border: 2px solid black;
+    border-bottom:none;
+
+   border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    padding: 8px;
+    margin-top: 21px;
+    background: #ccc;
+
+
+}
+
+ul.tabs li.active {
+    background: white;
+    border-bottom: 1px solid white;
+}
+
+.tab-wrapper .panels {
+
+    border-radius:10px;
+    border: 2px solid black;
+    padding:10px;
+    min-height: 100px;
+    background: white;
+}
+
+.tab-wrapper .panels .panel {
+
+    display: none;
+
+}
+
+.tab-wrapper .panels .panel.active {
+    display: block;
+}
+
+.clearfix{
+    clear:both;
+}
